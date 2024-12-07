@@ -1,10 +1,10 @@
 import React from "react";
 
-const HomePage = () => {
+const HomePage = ({ logout }) => {
     return (
         <div>
             <h1>Welcome to the Home Page </h1>
-            <button >Logout</button>
+            <button onClick={logout}>Logout</button>
         </div>
     );
 };
