@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import logo from "./logo/logo01.jpg";
+//import logo from "./logo/logo01.jpg";
 const LoginPage = ({ setToken }) => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");

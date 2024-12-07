@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./logo/logo01.jpg";
+//import logo from "./logo/logo01.jpg";
 
 const HomePage = ({ logout }) => {
     return (
