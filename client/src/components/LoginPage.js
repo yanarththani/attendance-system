@@ -4,17 +4,23 @@ import axios from "axios";
 const LoginPage = ({ setToken }) => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    
+    const [error, setError] = useState("");
 
-        const handleLogin = async (e) => {
+   /*01*/  const handleLogin = async (e) => {
         e.preventDefault();
-        const response = await axios.post("http://localhost:3001/login");
+        try {
+            const response = await axios.post("http://localhost:3001/login", { username, password });
+            setToken(response.data.token);
+            localStorage.setItem("token", response.data.token);
+        } catch (err) {
+            setError("Invalid username or password");
+        }
     };
 
     return (
         <div className="main">
             <h1>Login</h1>
-            
+            {error && <p style={{ color: "red" }}>{error}</p>}
             <form onSubmit={handleLogin}>
               <div className="input_box">
               <label>Username</label>
