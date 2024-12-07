@@ -3,10 +3,12 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const fs = require("fs");
 const path = require("path");
+const jwt = require("jsonwebtoken");
 
 
 const app = express();
 const PORT = 3001;
+const SECRET_KEY = "secret-key";
 
 //path 
 const usersFilePath = path.join(__dirname, "users.json");
@@ -24,8 +26,9 @@ app.post("/login", (req, res) => {
       const user = JSON.parse(fs.readFileSync(usersFilePath, "utf8"));
 
       if (username === user.username && password === user.password) {
-           
-          res.json({message: "success"});
+           const token = jwt.sign({ username }, SECRET_KEY, { expiresIn: "1h" });
+           res.json({ token });
+         // res.json({message: "success"});
       } else {
           res.status(401).json({ message: "Invalid username or password" });
       }
