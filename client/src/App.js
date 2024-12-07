@@ -21,7 +21,7 @@ const App = () => {
                     element={token ? <Navigate to="/home" /> : <LoginPage setToken={setToken} />} 
                 />
 
-                
+                {/* Redirect to the home page if the user is already logged in. */}
                 <Route 
                     path="/home"                                  
                     element={token ? <HomePage logout={logout} /> : <Navigate to="/" />} 
