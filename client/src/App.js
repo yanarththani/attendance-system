@@ -15,17 +15,17 @@ const App = () => {
     return (
         <BrowserRouter>
             <Routes>
-                {/* Login Page */}
+                {/* Redirect to login if not logged in */} 
                 <Route 
                     path="/" 
                     element={token ? <Navigate to="/home" /> : <LoginPage setToken={setToken} />} 
                 />
 
-                {/* Home Page */}
+                
                 <Route 
-                    path="/home" 
+                    path="/home"                                  
                     element={token ? <HomePage logout={logout} /> : <Navigate to="/" />} 
-                />
+                />                                                
             </Routes>
         </BrowserRouter>
     );
