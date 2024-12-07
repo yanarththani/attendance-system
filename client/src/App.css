@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  min-height: 70vh;
+  /* background-color: teal; */
 }
 
-.App-link {
-  color: #61dafb;
+.main{
+  width: 350px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0, 128, 128, 0.2);
+  color: #000000;
+  border-radius: 20px;
+  padding: 30px;
+  margin-left: 200px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo { 
+  height: 60px; 
+  margin-right: 10px;
+  /* background-image: url(./logo01.jpg); */
+ }
+ 
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 5px 50px;
+  color: teal;
+  font-size: 20px;
+  margin-bottom: 50px;  
+}
+
+h1{
+  flex-grow: 1; 
+  text-align: center;
+   margin: 0px;
+   font-weight: bold;
+   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+   margin-bottom: 10px;
+}
+
+h2{
+  color: #333;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: left;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+.input_box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+}
+
+.input_box input{
+  width: 60%;
+  height: 70%;
+  margin-top: 5px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: teal;
+  font-weight: 600;
+  border-bottom: 2px solid #000000;
+  /* padding-right: 10px; */
+}
+
+.input_box label{
+  position: absolute;
+  /* top: 0%; */
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #000000;
+  cursor: text;
+  /* transition: .5s; */
+}
+
+button{
+  position: relative;
+  width: 35%;
+  height: 45px;
+  background: transparent;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  border: 2px solid teal;
+  background-color: rgb(165, 200, 188);
+}
+
+
+
+.h_main{
+  padding: 30px;
+  margin-bottom: 150px;
+  text-align: left;
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-
+import logo from "./logo/logo01.jpg";
 const LoginPage = ({ setToken }) => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -18,7 +18,12 @@ const LoginPage = ({ setToken }) => {
     };
 
     return (
-        <div className="main">
+        <div>
+            <div className="header">
+            <img src={require("./logo/logo01.jpg")} alt="Logo" className="logo" /> 
+             <h1>Student Attendance System</h1>
+            </div>
+            <div className="main">
             <h1>Login</h1>
             {error && <p style={{ color: "red" }}>{error}</p>}
             <form onSubmit={handleLogin}>
@@ -40,6 +45,7 @@ const LoginPage = ({ setToken }) => {
               </div>
                 <button type="submit">Login</button>
             </form>
+        </div>
         </div>
     );
 };
