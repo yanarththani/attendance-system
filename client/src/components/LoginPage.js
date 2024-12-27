@@ -9,7 +9,7 @@ const LoginPage = ({ setToken }) => {
    /*01*/  const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:3001/login", { username, password });
+            const response = await axios.post("http://localhost:3002/login", { username, password });
             setToken(response.data.token);
             localStorage.setItem("token", response.data.token);
         } catch (err) {
